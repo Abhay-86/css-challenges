@@ -10,13 +10,15 @@ import {
 import Dec20 from "@/components/css/Dec20";
 import Dec19 from "@/components/css/Dec19";
 import Dec18 from "@/components/css/Dec18";
+import Dec17 from "@/components/css/Dec17";
 
-const items = ["Dec20", "Dec19", "Dec18"];
+const items = ["Dec20", "Dec19", "Dec18", "Dec17"];
 
 const componentMap: Record<string, React.ComponentType> = {
   Dec20: Dec20,
   Dec19: Dec19,
   Dec18: Dec18,
+  Dec17: Dec17,
 };
 
 export default function Home() {
