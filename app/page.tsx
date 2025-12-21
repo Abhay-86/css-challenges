@@ -7,15 +7,16 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
+import Dec21 from "@/components/css/Dec21";
 import Dec20 from "@/components/css/Dec20";
 import Dec19 from "@/components/css/Dec19";
 import Dec18 from "@/components/css/Dec18";
 import Dec17 from "@/components/css/Dec17";
 import Dec16 from "@/components/css/Dec16";
 import Dec15 from "@/components/css/Dec15";
-import Dec21 from "@/components/css/Dec21";
+import Dec14 from "@/components/css/Dec14";
 
-const items = ["Dec21", "Dec20", "Dec19", "Dec18", "Dec17", "Dec16", "Dec15"];
+const items = ["Dec21", "Dec20", "Dec19", "Dec18", "Dec17", "Dec16", "Dec15","Dec14"];
 
 const componentMap: Record<string, React.ComponentType> = {
   Dec21: Dec21,
@@ -25,6 +26,7 @@ const componentMap: Record<string, React.ComponentType> = {
   Dec17: Dec17,
   Dec16: Dec16,
   Dec15: Dec15,
+  Dec14: Dec14,
 };
 
 // Map each challenge/date to its CSSBattle url. Update per-item links as you solve them.
@@ -36,6 +38,7 @@ const linkMap: Record<string, string> = {
   Dec17: "https://cssbattle.dev/play/PD1RVCBVhUGKYXTqJOpR",
   Dec16: "https://cssbattle.dev/play/ujoQ19gIDKfouA2jBWyh",
   Dec15: "https://cssbattle.dev/play/31cMU96X4BSQxoJRkWak",
+  Dec14: "https://cssbattle.dev/play/qPIDsl1GfFSfpmk01pQO",
 };
 
 export default function Home() {
