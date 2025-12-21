@@ -13,10 +13,12 @@ import Dec18 from "@/components/css/Dec18";
 import Dec17 from "@/components/css/Dec17";
 import Dec16 from "@/components/css/Dec16";
 import Dec15 from "@/components/css/Dec15";
+import Dec21 from "@/components/css/Dec21";
 
-const items = ["Dec20", "Dec19", "Dec18", "Dec17", "Dec16", "Dec15"];
+const items = ["Dec21", "Dec20", "Dec19", "Dec18", "Dec17", "Dec16", "Dec15"];
 
 const componentMap: Record<string, React.ComponentType> = {
+  Dec21: Dec21,
   Dec20: Dec20,
   Dec19: Dec19,
   Dec18: Dec18,
@@ -27,6 +29,7 @@ const componentMap: Record<string, React.ComponentType> = {
 
 // Map each challenge/date to its CSSBattle url. Update per-item links as you solve them.
 const linkMap: Record<string, string> = {
+  Dec21: "https://cssbattle.dev/play/ArcjIfPj8fkr7EX2Km56",
   Dec20: "https://cssbattle.dev/play/1qDvtL9IDM2z2zW5Jtx2",
   Dec19: "https://cssbattle.dev/play/PGbERCTxzKMLkBImphKz",
   Dec18: "https://cssbattle.dev/play/GsEMtYqgRk2sQ3588dPj",
