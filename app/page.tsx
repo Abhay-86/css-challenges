@@ -12,8 +12,9 @@ import Dec19 from "@/components/css/Dec19";
 import Dec18 from "@/components/css/Dec18";
 import Dec17 from "@/components/css/Dec17";
 import Dec16 from "@/components/css/Dec16";
+import Dec15 from "@/components/css/Dec15";
 
-const items = ["Dec20", "Dec19", "Dec18", "Dec17", "Dec16"];
+const items = ["Dec20", "Dec19", "Dec18", "Dec17", "Dec16", "Dec15"];
 
 const componentMap: Record<string, React.ComponentType> = {
   Dec20: Dec20,
@@ -21,6 +22,17 @@ const componentMap: Record<string, React.ComponentType> = {
   Dec18: Dec18,
   Dec17: Dec17,
   Dec16: Dec16,
+  Dec15: Dec15,
+};
+
+// Map each challenge/date to its CSSBattle url. Update per-item links as you solve them.
+const linkMap: Record<string, string> = {
+  Dec20: "https://cssbattle.dev/play/1qDvtL9IDM2z2zW5Jtx2",
+  Dec19: "https://cssbattle.dev/play/PGbERCTxzKMLkBImphKz",
+  Dec18: "https://cssbattle.dev/play/GsEMtYqgRk2sQ3588dPj",
+  Dec17: "https://cssbattle.dev/play/PD1RVCBVhUGKYXTqJOpR",
+  Dec16: "https://cssbattle.dev/play/ujoQ19gIDKfouA2jBWyh",
+  Dec15: "https://cssbattle.dev/play/31cMU96X4BSQxoJRkWak",
 };
 
 export default function Home() {
@@ -59,7 +71,18 @@ export default function Home() {
                 {Component ? <Component /> : <div>Not found</div>}
               </CardContent>
 
-              <CardFooter></CardFooter>
+              <CardFooter>
+                {linkMap[item] ? (
+                  <a
+                    href={linkMap[item]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-blue-600 hover:underline"
+                  >
+                    View on CSSBattle
+                  </a>
+                ) : null}
+              </CardFooter>
             </Card>
           );
         })}
@@ -67,5 +90,6 @@ export default function Home() {
     </div>
   );
 }
+
 
 
