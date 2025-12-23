@@ -32,6 +32,9 @@ jobs:
 
       - name: Build Next.js site
         run: npm run build
+        env:
+          NODE_OPTIONS: '--max-old-space-size=4096'
+          NODE_ENV: 'production'
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

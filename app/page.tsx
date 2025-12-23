@@ -7,14 +7,17 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-import Dec21 from "@/components/css/Dec21";
-import Dec20 from "@/components/css/Dec20";
-import Dec19 from "@/components/css/Dec19";
-import Dec18 from "@/components/css/Dec18";
-import Dec17 from "@/components/css/Dec17";
-import Dec16 from "@/components/css/Dec16";
-import Dec15 from "@/components/css/Dec15";
-import Dec14 from "@/components/css/Dec14";
+import { lazy, Suspense } from "react";
+
+// Lazy load components for better performance
+const Dec21 = lazy(() => import("@/components/css/Dec21"));
+const Dec20 = lazy(() => import("@/components/css/Dec20"));
+const Dec19 = lazy(() => import("@/components/css/Dec19"));
+const Dec18 = lazy(() => import("@/components/css/Dec18"));
+const Dec17 = lazy(() => import("@/components/css/Dec17"));
+const Dec16 = lazy(() => import("@/components/css/Dec16"));
+const Dec15 = lazy(() => import("@/components/css/Dec15"));
+const Dec14 = lazy(() => import("@/components/css/Dec14"));
 
 const items = ["Dec21", "Dec20", "Dec19", "Dec18", "Dec17", "Dec16", "Dec15","Dec14"];
 
@@ -74,7 +77,9 @@ export default function Home() {
               </CardHeader>
 
               <CardContent className="h-[200px] flex items-center justify-center">
-                {Component ? <Component /> : <div>Not found</div>}
+                <Suspense fallback={<div className="animate-pulse">Loading...</div>}>
+                  {Component ? <Component /> : <div>Not found</div>}
+                </Suspense>
               </CardContent>
 
               <CardFooter>
