@@ -10,6 +10,7 @@ import {
 import { lazy, Suspense } from "react";
 
 // Lazy load components for better performance
+const Dec22 = lazy(() => import("@/components/css/Dec22"));
 const Dec21 = lazy(() => import("@/components/css/Dec21"));
 const Dec20 = lazy(() => import("@/components/css/Dec20"));
 const Dec19 = lazy(() => import("@/components/css/Dec19"));
@@ -19,9 +20,10 @@ const Dec16 = lazy(() => import("@/components/css/Dec16"));
 const Dec15 = lazy(() => import("@/components/css/Dec15"));
 const Dec14 = lazy(() => import("@/components/css/Dec14"));
 
-const items = ["Dec21", "Dec20", "Dec19", "Dec18", "Dec17", "Dec16", "Dec15","Dec14"];
+const items = ["Dec22", "Dec21", "Dec20", "Dec19", "Dec18", "Dec17", "Dec16", "Dec15", "Dec14"];
 
 const componentMap: Record<string, React.ComponentType> = {
+  Dec22: Dec22,
   Dec21: Dec21,
   Dec20: Dec20,
   Dec19: Dec19,
@@ -34,6 +36,7 @@ const componentMap: Record<string, React.ComponentType> = {
 
 // Map each challenge/date to its CSSBattle url. Update per-item links as you solve them.
 const linkMap: Record<string, string> = {
+  Dec22: "https://cssbattle.dev/play/L7GbFcLzQxnefKaDh4zJ",
   Dec21: "https://cssbattle.dev/play/ArcjIfPj8fkr7EX2Km56",
   Dec20: "https://cssbattle.dev/play/1qDvtL9IDM2z2zW5Jtx2",
   Dec19: "https://cssbattle.dev/play/PGbERCTxzKMLkBImphKz",
