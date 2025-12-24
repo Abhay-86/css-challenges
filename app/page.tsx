@@ -10,6 +10,7 @@ import {
 import { lazy, Suspense } from "react";
 
 // Lazy load components for better performance
+const Dec23 = lazy(() => import("@/components/css/Dec23"));
 const Dec22 = lazy(() => import("@/components/css/Dec22"));
 const Dec21 = lazy(() => import("@/components/css/Dec21"));
 const Dec20 = lazy(() => import("@/components/css/Dec20"));
@@ -20,9 +21,10 @@ const Dec16 = lazy(() => import("@/components/css/Dec16"));
 const Dec15 = lazy(() => import("@/components/css/Dec15"));
 const Dec14 = lazy(() => import("@/components/css/Dec14"));
 
-const items = ["Dec22", "Dec21", "Dec20", "Dec19", "Dec18", "Dec17", "Dec16", "Dec15", "Dec14"];
+const items = ["Dec23","Dec22", "Dec21", "Dec20", "Dec19", "Dec18", "Dec17", "Dec16", "Dec15", "Dec14"];
 
 const componentMap: Record<string, React.ComponentType> = {
+  Dec23: Dec23,
   Dec22: Dec22,
   Dec21: Dec21,
   Dec20: Dec20,
