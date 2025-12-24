@@ -38,6 +38,7 @@ const componentMap: Record<string, React.ComponentType> = {
 
 // Map each challenge/date to its CSSBattle url. Update per-item links as you solve them.
 const linkMap: Record<string, string> = {
+  Dec23: "https://cssbattle.dev/play/CWggCCsKLlttsJS55Fl6",
   Dec22: "https://cssbattle.dev/play/L7GbFcLzQxnefKaDh4zJ",
   Dec21: "https://cssbattle.dev/play/ArcjIfPj8fkr7EX2Km56",
   Dec20: "https://cssbattle.dev/play/1qDvtL9IDM2z2zW5Jtx2",
